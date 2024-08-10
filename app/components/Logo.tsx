@@ -1,4 +1,4 @@
-import { SiReact } from 'react-icons/si';
+import { SiReact } from 'react-icons/si'
 
 const Logo = () => {
   return (
@@ -15,7 +15,7 @@ const Logo = () => {
         <span className="font-bold text-orange-500">Shelf</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo
