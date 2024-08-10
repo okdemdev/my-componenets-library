@@ -1,11 +1,11 @@
-import { SignOutButton, UserButton } from '@clerk/nextjs'
+import ContentArea from './ContentArea'
+import Sidebar from './Sidebar'
 
 const dashboard = () => {
   return (
-    <div>
-      <UserButton />
-      <p>hello</p>
-      <SignOutButton />
+    <div className="flex">
+      <Sidebar />
+      <ContentArea />
     </div>
   )
 }
