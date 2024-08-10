@@ -1,20 +1,13 @@
+'user server'
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI!
-
-let isConnected: boolean = false
-
-export async function connectToDatabase() {
-  if (isConnected) {
-    return
-  }
-
+export async function connect(): Promise<void> {
   try {
-    await mongoose.connect(MONGODB_URI)
-    isConnected = true
-    console.log('Connected to MongoDB')
+    await mongoose.connect(process.env.MONGO_URI as string)
+    console.log('db connected...')
   } catch (error) {
-    console.error('Error connecting to MongoDB:', error)
-    throw error
+    console.log(error)
   }
 }
+
+export default connect
